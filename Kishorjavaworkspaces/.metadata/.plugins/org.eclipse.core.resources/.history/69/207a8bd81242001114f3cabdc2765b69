@@ -1,0 +1,31 @@
+package com.project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class RegistartionForm {
+
+	public static void main(String[] args) throws SQLException {
+System.out.println("Main Method Started !");
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter your Name ");
+String s=sc.next();
+System.out.println("Enter your Role ");
+String s1=sc.next();
+
+try {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+} catch (ClassNotFoundException e) {
+	e.printStackTrace();
+	
+	Connection con=DriverManager.getConnection("jdbc:mysql//localhost/3306/sqlpractice","root","root");
+	
+	PreparedStatement ps=new PreparedStatement("???");
+}
+
+	}
+
+}
